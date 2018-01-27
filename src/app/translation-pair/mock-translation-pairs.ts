@@ -1,6 +1,6 @@
-import { Translation } from './translation'
+import { TranslationPair } from './translation-pair'
 
-export var TRANSLATIONS: Translation[] = [
+export var TRANSLATIONS: TranslationPair[] = [
     {word: 'apple', translation: 'яблоко'},
     {word: 'banana', translation: 'банан'},
     {word: 'nuts', translation: 'орех'},

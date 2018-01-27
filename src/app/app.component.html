@@ -1,0 +1,28 @@
+<h1>Exercise-1: Answer Select</h1>
+<p>Напишите приложение, где работали бы два компонента:</p>
+<p>Упражнение select. На вход компонент принимает массив ответов (строка + правильность ответа).</p>
+<p>Пример:  [(value: "apple", correct: false), (value: "pear", correct: true), (value: "pineapple", correct: false)]</p>
+<p>Упражнение выглядит как обычный html select, предлагающий выбрать ответ из списка.</p>
+<p>При этом, компонент на страницу может добавляться как через ng-repeat и передачу данных из контроллера, так и вручную.</p>
+<p>Упражнения могут располагаться в разных частях страницы и находиться внутри изолированных scope.</p>
+<p>Виджет Counter для отображения количества очков. Отображает всего 2 числа: общее количество ответов; количество правильных ответов.</p>
+<h2>Question #1:</h2>
+<vt-select-answer [answers]="availableAnswers" (onAnswerChange)="onAnswerChange($event)"></vt-select-answer>
+<h2>Question #2:</h2>
+<vt-select-answer [answers]="availableAnswers" (onAnswerChange)="onAnswerChange($event)"></vt-select-answer>
+<h2>Question #3:</h2>
+<vt-select-answer [answers]="availableAnswers" (onAnswerChange)="onAnswerChange($event)"></vt-select-answer>
+
+<vt-counter-answer [total]="totalSelectedAnswers" [correct]="correctSelectedAnswers"></vt-counter-answer>
+
+<hr/>
+
+<h1>Exercise-2: Translation Pair</h1>
+<p>Напишите компонент, который реализует виджет для изучения слов.</p>
+<p>На вход компонент принимает массив слов и переводов.</p>
+<p>Пример: [(word: "apple", translation: "яблоко"), (word: "nuts", translation: "орех")]</p>
+<p>Компонент должен выводить на экран в один момент времени только одну пару слов (например, "apple — яблоко"), переключение к следующей паре происходит при нажатии на пробел.</p>
+<p><em>(Press "Spacebar" keyboard to show next translation pair)</em></p>
+<vt-translation-pair [translationPairs]="availableTranslationPairs"></vt-translation-pair>
+
+<hr/>

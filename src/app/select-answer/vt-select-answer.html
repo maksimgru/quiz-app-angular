@@ -1,0 +1,6 @@
+<form>
+    <select name="select" [(ngModel)]="selectData" (ngModelChange)="onSelect($event)">
+        <option [ngValue]="emptyAnswer" [attr.selected]="true">-- select Answer --</option>
+        <option *ngFor="let answer of answers" [ngValue]="answer">{{answer.value}}</option>
+    </select>
+</form>

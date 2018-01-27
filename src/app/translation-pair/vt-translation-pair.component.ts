@@ -1,19 +1,15 @@
 import { Component, EventEmitter, Input, Output, OnInit, HostListener} from '@angular/core';
 
-import { Translation } from './../translation/translation';
+import { TranslationPair } from './translation-pair';
 
 @Component({
-    selector: 'vt-translation-exercise',
-    template: `
-        <div>
-            <p><strong>Word:</strong> {{currentPair.word}}</p>
-            <p><strong>Translation</strong>: {{currentPair.translation}}</p>
-        </div>
-    `
+    selector: 'vt-translation-pair',
+    templateUrl: './vt-translation-pair.html',
+    styleUrls: ['./vt-translation-pair.css']
 })
-export class VtTranslationExerciseComponent implements OnInit{
-    @Input() translationPairs: Translation[] = [];
-    currentPair: Translation = {word:'', translation:''};
+export class VtTranslationPairComponent implements OnInit {
+    @Input() translationPairs: TranslationPair[] = [];
+    currentPair: TranslationPair = {word:'', translation:''};
 
     @HostListener("window:keydown", ["$event"])
     onKeyDown($event:any) {
@@ -26,12 +22,11 @@ export class VtTranslationExerciseComponent implements OnInit{
         this.randomTranslationPair();
     }
 
-    getRandomInt(min: number, max: number): number
-    {
+    getRandomInt(min: number, max: number): number {
         return Math.floor( Math.random() * (max - min + 1) ) + min;
     }
 
-    randomTranslationPair(): void{
+    randomTranslationPair(): void {
         var totalPairs, randomIndex;
         totalPairs = this.translationPairs.length;
         if (totalPairs) {
