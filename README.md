@@ -1,4 +1,4 @@
-# Answer App Angular
+# Quiz App Angular
 ## View Demo http://embed.plnkr.co/K3R1YTsyrz5gBwoEGB8z/?show=preview
 1. Write an application where two components would work:
   * The first - select exercise. At the input, the component receives an array of responses (the string + the correct flag).
